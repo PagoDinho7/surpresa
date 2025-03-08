@@ -1,0 +1,95 @@
+/* Reset básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container do quiz */
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Título do quiz */
+h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Labels e Inputs */
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #FF4C6E; /* Cor de foco */
+}
+
+/* Botão de envio */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF4C6E; /* Cor suave de rosa */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF2A4E; /* Cor do botão quando passa o mouse */
+}
+
+/* Adicionando animações suaves */
+input[type="text"], button {
+    transition: transform 0.3s ease;
+}
+
+input[type="text"]:focus, button:focus {
+    transform: scale(1.05); /* Aumenta ligeiramente ao focar no input ou passar o mouse no botão */
+}
+
+/* Adicionando o fundo de uma imagem opcional para dar um toque especial */
+body {
+    background: url('https://via.placeholder.com/1500x1000/FF4C6E/FFFFFF?text=Desafio+do+Amor') no-repeat center center fixed;
+    background-size: cover;
+}

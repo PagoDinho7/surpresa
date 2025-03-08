@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Amor ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Vamos ver se você lembra do nosso passado! 😍</h2>
+        <form id="quizForm">
+            <label>1. Em que dia começamos a namorar?</label>
+            <input type="text" id="q1" required>
+
+            <label>2. Qual foi o primeiro filme que assistimos juntos?</label>
+            <input type="text" id="q2" required>
+
+            <label>3. O que mais gostamos de fazer?</label>
+            <input type="text" id="q3" required>
+
+            <label>4. Qual apelido é o apelido que mais gosto de te chamar?</label>
+            <input type="text" id="q4" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Respostas corretas (substitua pelas respostas verdadeiras)
+            const respostasCorretas = ["07/09/2023", "Barbie", "Comer", "Paçoquinha"];
+
+            // Pegando respostas do usuário
+            const respostasUsuario = [
+                document.getElementById("q1").value.trim().toLowerCase(),
+                document.getElementById("q2").value.trim().toLowerCase(),
+                document.getElementById("q3").value.trim().toLowerCase(),
+                document.getElementById("q4").value.trim().toLowerCase()
+            ];
+
+            // Verifica se todas as respostas estão corretas
+            let acertos = 0;
+            for (let i = 0; i < respostasCorretas.length; i++) {
+                if (respostasUsuario[i] === respostasCorretas[i].toLowerCase()) {
+                    acertos++;
+                }
+            }
+
+            if (acertos === respostasCorretas.length) {
+                alert("Parabéns, meu amor! Você acertou tudo! Agora vem a surpresa! ❤️");
+                window.location.href = "surpresa.html"; // Redireciona para a surpresa
+            } else {
+                alert("Hmm... parece que algumas respostas estão erradas! Tente de novo. 😘");
+            }
+        });
+    </script>
+</body>
+</html>
